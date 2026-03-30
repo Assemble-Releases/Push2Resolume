@@ -13,7 +13,7 @@ Control Resolume Arena with your Ableton Push 2. Push2Resolume bridges the Push 
 
 1. Download the latest installer from the [releases](releases/) folder
 2. Run the installer — it will install to Program Files and add a startup shortcut
-3. Set up NDI and ArtNet in Resolume (see below)
+3. Set up NDI in Resolume (see below)
 4. Connect your Push 2 and launch Push2Resolume
 
 ## Resolume NDI Setup
@@ -40,33 +40,51 @@ The NDI source name must match: `{YourComputerName} (Arena - PushDisplay)`
 
 Push2Resolume will automatically detect and connect to this NDI source.
 
-## Resolume ArtNet Setup
-
-Push2Resolume uses ArtNet to light up the Push 2 pads with colors matching your Resolume clips. Resolume sends an 8x8 RGB pixel grid via ArtNet, and Push2Resolume maps each pixel to a pad color.
-
-### Setup
-
-1. Copy `presets/led8x8.xml` to your Resolume fixtures folder (usually `Documents/Resolume Arena/Fixtures/`)
-2. In Resolume, go to **Arena > Advanced Output**
-3. Add a **DMX/ArtNet** output using the `LED8x8` fixture
-4. Set the ArtNet **universe** and **start address** (defaults: universe 0, address 1)
-5. Map the fixture to your composition
-
-### Configuration
-
-In Push2Resolume's settings (accessible via the tray icon), make sure the ArtNet universe and start address match what you configured in Resolume:
-
-- **ArtNet Universe**: 0 (default)
-- **ArtNet Start Address**: 1 (default)
-
 ## Usage
 
 Push2Resolume automatically connects to Resolume and your Push 2 on startup.
 
-- **Pads** — Trigger clips in Resolume, colors reflect clip state via ArtNet
-- **Encoders** — Control layer opacity and effect parameters
-- **Display** — Shows live clip previews and layer state on the Push 2 screen
+### Pads (8x8 grid)
+
+The pad grid is rotated 90 degrees — each column maps to a Resolume layer, each row to a clip slot. Press a pad to trigger the corresponding clip.
+
+### Encoders
+
+The 8 encoders above the display control layer opacity (Layer 1-8). Turn to adjust, the value is sent to Resolume in real-time.
+
+### Display
+
+The Push 2 screen shows 8 layer outputs via NDI, with opacity sliders and the active clip name per layer.
+
+### Above-screen buttons
+
+Select a layer in Resolume (Layer 1-8). The selected layer gets a green border on the display.
+
+### Below-screen buttons
+
+Function depends on the active mode:
+
+| Mode | Button action |
+|------|---------------|
+| **Stop Clip** (default) | Clear layer 1-8 |
+| **Mute** | Toggle layer bypass 1-8 |
+| **Solo** | Toggle layer solo 1-8 |
+
+### Mode buttons
+
+| Button | Function |
+|--------|----------|
+| **Stop Clip** | Activate Stop Clip mode (default) |
+| **Mute** | Activate Mute mode |
+| **Solo** | Activate Solo mode |
+
+The active mode button lights up green.
+
+### Arrow keys
+
+Navigate the clip preview selection on the Resolume grid. Wraps around at the edges.
 
 ## Uninstall
 
 Use Windows Add/Remove Programs or run the uninstaller from the Start menu.
+
