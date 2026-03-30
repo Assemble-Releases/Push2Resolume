@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fixture name="Fixture" uuid="8d1e6b23e8344d0b842ecfc927d29ca2" fixtureName="LED8x8">
+	<versionInfo name="Resolume Arena" majorVersion="7" minorVersion="25" microVersion="2" revision="1976"/>
+	<Params name="Params">
+		<ParamFixturePixels storage="0" name="Pixels">
+			<ParamRange name="Width" T="DOUBLE" default="1" value="8">
+				<PhaseSourceStatic name="PhaseSourceStatic"/>
+				<BehaviourDouble name="BehaviourDouble"/>
+				<ValueRange name="defaultRange" min="1" max="512"/>
+				<ValueRange name="minMax" min="1" max="512"/>
+				<ValueRange name="startStop" min="1" max="512"/>
+			</ParamRange>
+			<ParamRange name="Height" T="DOUBLE" default="1" value="8">
+				<PhaseSourceStatic name="PhaseSourceStatic"/>
+				<BehaviourDouble name="BehaviourDouble"/>
+				<ValueRange name="defaultRange" min="1" max="512"/>
+				<ValueRange name="minMax" min="1" max="512"/>
+				<ValueRange name="startStop" min="1" max="512"/>
+			</ParamRange>
+			<ParamChoice name="Color Format" T="STRING" default="rgb" value="rgb" storeChoices="0"/>
+			<ParamChoice name="Distribution" T="INT32" default="170" value="170" storeChoices="0"/>
+			<ParamRange name="Gamma" T="DOUBLE" default="2.5" value="2.5">
+				<PhaseSourceStatic name="PhaseSourceStatic"/>
+				<BehaviourDouble name="BehaviourDouble"/>
+				<ValueRange name="defaultRange" min="1" max="3"/>
+				<ValueRange name="minMax" min="1" max="3"/>
+				<ValueRange name="startStop" min="1" max="3"/>
+			</ParamRange>
+		</ParamFixturePixels>
+	</Params>
+</Fixture>
+

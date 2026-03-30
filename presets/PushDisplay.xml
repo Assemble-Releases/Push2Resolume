@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XmlState name="PushDisplay">
+	<versionInfo name="Resolume Arena" majorVersion="7" minorVersion="25" microVersion="3" revision="2905"/>
+	<ScreenSetup name="ScreenSetup">
+		<Params name="ScreenSetupParams"/>
+		<CurrentCompositionTextureSize width="1920" height="1080"/>
+		<screens>
+			<Screen name="PushDisplay" uniqueId="0">
+				<Params name="Params">
+					<Param name="Name" T="STRING" default="" value="PushDisplay"/>
+					<Param name="Enabled" T="BOOL" default="1" value="1"/>
+					<Param name="Hidden" T="BOOL" default="0" value="0"/>
+				</Params>
+				<Params name="Output">
+					<ParamRange name="Opacity" T="DOUBLE" default="1" value="1">
+						<PhaseSourceStatic name="PhaseSourceStatic"/>
+						<BehaviourDouble name="BehaviourDouble"/>
+						<ValueRange name="defaultRange" min="0" max="1"/>
+						<ValueRange name="minMax" min="0" max="1"/>
+						<ValueRange name="startStop" min="0" max="1"/>
+					</ParamRange>
+				</Params>
+				<guides/>
+				<layers>
+					<!-- Slice 1: Layer 1 (x=0..120, 160px tall, rotated 90deg) -->
+					<Slice uniqueId="1">
+						<Params name="Common">
+							<Param name="Name" T="STRING" default="Layer" value="Layer 1"/>
+							<Param name="Enabled" T="BOOL" default="1" value="1"/>
+						</Params>
+						<Params name="Input">
+							<ParamChoice name="Input Source" default="0:1" value="0:1" storeChoices="0"/>
+							<Param name="Input Opacity" T="BOOL" default="1" value="1"/>
+							<Param name="Input Bypass/Solo" T="BOOL" default="1" value="1"/>
+						</Params>
+						<Params name="Output"/>
+						<InputRect orientation="0">
+							<v x="0" y="0"/>
+							<v x="240" y="0"/>
+							<v x="240" y="135"/>
+							<v x="0" y="135"/>
+						</InputRect>
+						<OutputRect orientation="1.5707963267948966">
+							<v x="0" y="0"/>
+							<v x="120" y="0"/>
+							<v x="120" y="160"/>
+							<v x="0" y="160"/>
+						</OutputRect>
+						<Warper>
+							<Params name="Warper">
+								<ParamChoice name="Point Mode" default="PM_LINEAR" value="PM_LINEAR" storeChoices="0"/>
+							</Params>
+						</Warper>
+					</Slice>
+					<!-- Slice 2: Layer 2 -->
+					<Slice uniqueId="2">
+						<Params name="Common">
+							<Param name="Name" T="STRING" default="Layer" value="Layer 2"/>
+							<Param name="Enabled" T="BOOL" default="1" value="1"/>
+						</Params>
+						<Params name="Input">
+							<ParamChoice name="Input Source" default="0:2" value="0:2" storeChoices="0"/>
+							<Param name="Input Opacity" T="BOOL" default="1" value="1"/>
+							<Param name="Input Bypass/Solo" T="BOOL" default="1" value="1"/>
+						</Params>
+						<Params name="Output"/>
+						<InputRect orientation="0">
+							<v x="240" y="0"/>
+							<v x="480" y="0"/>
+							<v x="480" y="135"/>
+							<v x="240" y="135"/>
+						</InputRect>
+						<OutputRect orientation="1.5707963267948966">
+							<v x="120" y="0"/>
+							<v x="240" y="0"/>
+							<v x="240" y="160"/>
+							<v x="120" y="160"/>
+						</OutputRect>
+						<Warper>
+							<Params name="Warper">
+								<ParamChoice name="Point Mode" default="PM_LINEAR" value="PM_LINEAR" storeChoices="0"/>
+							</Params>
+						</Warper>
+					</Slice>
+					<!-- Slice 3: Layer 3 -->
+					<Slice uniqueId="3">
+						<Params name="Common">
+							<Param name="Name" T="STRING" default="Layer" value="Layer 3"/>
+							<Param name="Enabled" T="BOOL" default="1" value="1"/>
+						</Params>
+						<Params name="Input">
+							<ParamChoice name="Input Source" default="0:3" value="0:3" storeChoices="0"/>
+							<Param name="Input Opacity" T="BOOL" default="1" value="1"/>
+							<Param name="Input Bypass/Solo" T="BOOL" default="1" value="1"/>
+						</Params>
+						<Params name="Output"/>
+						<InputRect orientation="0">
+							<v x="480" y="0"/>
+							<v x="720" y="0"/>
+							<v x="720" y="135"/>
+							<v x="480" y="135"/>
+						</InputRect>
+						<OutputRect orientation="1.5707963267948966">
+							<v x="240" y="0"/>
+							<v x="360" y="0"/>
+							<v x="360" y="160"/>
+							<v x="240" y="160"/>
+						</OutputRect>
+						<Warper>
+							<Params name="Warper">
+								<ParamChoice name="Point Mode" default="PM_LINEAR" value="PM_LINEAR" storeChoices="0"/>
+							</Params>
+						</Warper>
+					</Slice>
+					<!-- Slice 4: Layer 4 -->
+					<Slice uniqueId="4">
+						<Params name="Common">
+							<Param name="Name" T="STRING" default="Layer" value="Layer 4"/>
+							<Param name="Enabled" T="BOOL" default="1" value="1"/>
+						</Params>
+						<Params name="Input">
+							<ParamChoice name="Input Source" default="0:4" value="0:4" storeChoices="0"/>
+							<Param name="Input Opacity" T="BOOL" default="1" value="1"/>
+							<Param name="Input Bypass/Solo" T="BOOL" default="1" value="1"/>
+						</Params>
+						<Params name="Output"/>
+						<InputRect orientation="0">
+							<v x="720" y="0"/>
+							<v x="960" y="0"/>
+							<v x="960" y="135"/>
+							<v x="720" y="135"/>
+						</InputRect>
+						<OutputRect orientation="1.5707963267948966">
+							<v x="360" y="0"/>
+							<v x="480" y="0"/>
+							<v x="480" y="160"/>
+							<v x="360" y="160"/>
+						</OutputRect>
+						<Warper>
+							<Params name="Warper">
+								<ParamChoice name="Point Mode" default="PM_LINEAR" value="PM_LINEAR" storeChoices="0"/>
+							</Params>
+						</Warper>
+					</Slice>
+					<!-- Slice 5: Layer 5 -->
+					<Slice uniqueId="5">
+						<Params name="Common">
+							<Param name="Name" T="STRING" default="Layer" value="Layer 5"/>
+							<Param name="Enabled" T="BOOL" default="1" value="1"/>
+						</Params>
+						<Params name="Input">
+							<ParamChoice name="Input Source" default="0:5" value="0:5" storeChoices="0"/>
+							<Param name="Input Opacity" T="BOOL" default="1" value="1"/>
+							<Param name="Input Bypass/Solo" T="BOOL" default="1" value="1"/>
+						</Params>
+						<Params name="Output"/>
+						<InputRect orientation="0">
+							<v x="960" y="0"/>
+							<v x="1200" y="0"/>
+							<v x="1200" y="135"/>
+							<v x="960" y="135"/>
+						</InputRect>
+						<OutputRect orientation="1.5707963267948966">
+							<v x="480" y="0"/>
+							<v x="600" y="0"/>
+							<v x="600" y="160"/>
+							<v x="480" y="160"/>
+						</OutputRect>
+						<Warper>
+							<Params name="Warper">
+								<ParamChoice name="Point Mode" default="PM_LINEAR" value="PM_LINEAR" storeChoices="0"/>
+							</Params>
+						</Warper>
+					</Slice>
+					<!-- Slice 6: Layer 6 -->
+					<Slice uniqueId="6">
+						<Params name="Common">
+							<Param name="Name" T="STRING" default="Layer" value="Layer 6"/>
+							<Param name="Enabled" T="BOOL" default="1" value="1"/>
+						</Params>
+						<Params name="Input">
+							<ParamChoice name="Input Source" default="0:6" value="0:6" storeChoices="0"/>
+							<Param name="Input Opacity" T="BOOL" default="1" value="1"/>
+							<Param name="Input Bypass/Solo" T="BOOL" default="1" value="1"/>
+						</Params>
+						<Params name="Output"/>
+						<InputRect orientation="0">
+							<v x="1200" y="0"/>
+							<v x="1440" y="0"/>
+							<v x="1440" y="135"/>
+							<v x="1200" y="135"/>
+						</InputRect>
+						<OutputRect orientation="1.5707963267948966">
+							<v x="600" y="0"/>
+							<v x="720" y="0"/>
+							<v x="720" y="160"/>
+							<v x="600" y="160"/>
+						</OutputRect>
+						<Warper>
+							<Params name="Warper">
+								<ParamChoice name="Point Mode" default="PM_LINEAR" value="PM_LINEAR" storeChoices="0"/>
+							</Params>
+						</Warper>
+					</Slice>
+					<!-- Slice 7: Layer 7 -->
+					<Slice uniqueId="7">
+						<Params name="Common">
+							<Param name="Name" T="STRING" default="Layer" value="Layer 7"/>
+							<Param name="Enabled" T="BOOL" default="1" value="1"/>
+						</Params>
+						<Params name="Input">
+							<ParamChoice name="Input Source" default="0:7" value="0:7" storeChoices="0"/>
+							<Param name="Input Opacity" T="BOOL" default="1" value="1"/>
+							<Param name="Input Bypass/Solo" T="BOOL" default="1" value="1"/>
+						</Params>
+						<Params name="Output"/>
+						<InputRect orientation="0">
+							<v x="1440" y="0"/>
+							<v x="1680" y="0"/>
+							<v x="1680" y="135"/>
+							<v x="1440" y="135"/>
+						</InputRect>
+						<OutputRect orientation="1.5707963267948966">
+							<v x="720" y="0"/>
+							<v x="840" y="0"/>
+							<v x="840" y="160"/>
+							<v x="720" y="160"/>
+						</OutputRect>
+						<Warper>
+							<Params name="Warper">
+								<ParamChoice name="Point Mode" default="PM_LINEAR" value="PM_LINEAR" storeChoices="0"/>
+							</Params>
+						</Warper>
+					</Slice>
+					<!-- Slice 8: Layer 8 -->
+					<Slice uniqueId="8">
+						<Params name="Common">
+							<Param name="Name" T="STRING" default="Layer" value="Layer 8"/>
+							<Param name="Enabled" T="BOOL" default="1" value="1"/>
+						</Params>
+						<Params name="Input">
+							<ParamChoice name="Input Source" default="0:8" value="0:8" storeChoices="0"/>
+							<Param name="Input Opacity" T="BOOL" default="1" value="1"/>
+							<Param name="Input Bypass/Solo" T="BOOL" default="1" value="1"/>
+						</Params>
+						<Params name="Output"/>
+						<InputRect orientation="0">
+							<v x="1680" y="0"/>
+							<v x="1920" y="0"/>
+							<v x="1920" y="135"/>
+							<v x="1680" y="135"/>
+						</InputRect>
+						<OutputRect orientation="1.5707963267948966">
+							<v x="840" y="0"/>
+							<v x="960" y="0"/>
+							<v x="960" y="160"/>
+							<v x="840" y="160"/>
+						</OutputRect>
+						<Warper>
+							<Params name="Warper">
+								<ParamChoice name="Point Mode" default="PM_LINEAR" value="PM_LINEAR" storeChoices="0"/>
+							</Params>
+						</Warper>
+					</Slice>
+				</layers>
+				<OutputDevice>
+					<OutputDeviceNDI name="PushDisplay" width="960" height="160"/>
+				</OutputDevice>
+			</Screen>
+		</screens>
+	</ScreenSetup>
+</XmlState>
